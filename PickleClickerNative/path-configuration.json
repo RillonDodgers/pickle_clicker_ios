@@ -3,6 +3,22 @@
   "rules": [
     {
       "patterns": [
+        "/channing"
+      ],
+      "properties": {
+        "view_controller": "channing_tabs"
+      }
+    },
+    {
+      "patterns": [
+        "/gallery"
+      ],
+      "properties": {
+        "view_controller": "gallery_tabs"
+      }
+    },
+    {
+      "patterns": [
         "/registration/new",
         "/session/new"
       ],
