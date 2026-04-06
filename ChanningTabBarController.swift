@@ -118,9 +118,55 @@ class HiddenAppTabBarController: HotwireTabBarController, UITabBarControllerDele
             sheet.addAction(action)
         }
 
+#if DEBUG
+        sheet.addAction(
+            UIAlertAction(title: "Clear Image Cache", style: .destructive) { [weak self] _ in
+                self?.confirmImageCacheReset()
+            }
+        )
+#endif
+
         sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(sheet, animated: true)
     }
+
+#if DEBUG
+    private func confirmImageCacheReset() {
+        let alert = UIAlertController(
+            title: "Clear Image Cache?",
+            message: "This clears cached image responses for the embedded app and reloads the current screen. Sign-in data and cookies stay intact.",
+            preferredStyle: .alert
+        )
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(
+            UIAlertAction(title: "Clear", style: .destructive) { [weak self] _ in
+                guard let self else { return }
+
+                Task { @MainActor [weak self] in
+                    self?.clearEmbeddedImageCache()
+                }
+            }
+        )
+
+        present(alert, animated: true)
+    }
+
+    @MainActor
+    private func clearEmbeddedImageCache() {
+        URLCache.shared.removeAllCachedResponses()
+
+        activeNavigator.reload()
+
+        let confirmation = UIAlertController(
+            title: "Image Cache Cleared",
+            message: "Cached image responses were cleared and the current screen was reloaded.",
+            preferredStyle: .alert
+        )
+        confirmation.addAction(UIAlertAction(title: "OK", style: .default))
+        present(confirmation, animated: true)
+    }
+#endif
 
     private func configureAppearance() {
         let appearance = UITabBarAppearance()
