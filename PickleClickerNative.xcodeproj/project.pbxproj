@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460A7AB72F85000100A1C001 /* ChanningTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A7AB62F85000100A1C001 /* ChanningTabBarController.swift */; };
 		46D0EEFD2F8426CC00230E49 /* HotwireNative in Frameworks */ = {isa = PBXBuildFile; productRef = 46D0EEFC2F8426CC00230E49 /* HotwireNative */; };
 		46D0EEFF2F84282300230E49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0EEFE2F84282300230E49 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		460A7AB62F85000100A1C001 /* ChanningTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanningTabBarController.swift; sourceTree = "<group>"; };
 		46D0EEED2F84269200230E49 /* PickleClickerNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickleClickerNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D0EEFE2F84282300230E49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +43,7 @@
 			children = (
 				46D0EEEF2F84269200230E49 /* PickleClickerNative */,
 				46D0EEEE2F84269200230E49 /* Products */,
+				460A7AB62F85000100A1C001 /* ChanningTabBarController.swift */,
 				46D0EEFE2F84282300230E49 /* SceneDelegate.swift */,
 			);
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				460A7AB72F85000100A1C001 /* ChanningTabBarController.swift in Sources */,
 				46D0EEFF2F84282300230E49 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
