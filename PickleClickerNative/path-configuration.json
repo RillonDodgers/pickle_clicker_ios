@@ -1,0 +1,15 @@
+{
+  "settings": {},
+  "rules": [
+    {
+      "patterns": [
+        "/registration/new",
+        "/session/new"
+      ],
+      "properties": {
+        "context": "modal",
+        "modal_style": "page_sheet"
+      }
+    }
+  ]
+}

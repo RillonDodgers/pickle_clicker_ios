@@ -6,8 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		46D0EEFD2F8426CC00230E49 /* HotwireNative in Frameworks */ = {isa = PBXBuildFile; productRef = 46D0EEFC2F8426CC00230E49 /* HotwireNative */; };
+		46D0EEFF2F84282300230E49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0EEFE2F84282300230E49 /* SceneDelegate.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		46D0EEED2F84269200230E49 /* PickleClickerNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickleClickerNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46D0EEFE2F84282300230E49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D0EEFD2F8426CC00230E49 /* HotwireNative in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +41,7 @@
 			children = (
 				46D0EEEF2F84269200230E49 /* PickleClickerNative */,
 				46D0EEEE2F84269200230E49 /* Products */,
+				46D0EEFE2F84282300230E49 /* SceneDelegate.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +73,7 @@
 			);
 			name = PickleClickerNative;
 			packageProductDependencies = (
+				46D0EEFC2F8426CC00230E49 /* HotwireNative */,
 			);
 			productName = PickleClickerNative;
 			productReference = 46D0EEED2F84269200230E49 /* PickleClickerNative.app */;
@@ -94,6 +103,9 @@
 			);
 			mainGroup = 46D0EEE42F84269200230E49;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				46D0EEFB2F8426CC00230E49 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 46D0EEEE2F84269200230E49 /* Products */;
 			projectDirPath = "";
@@ -119,6 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D0EEFF2F84282300230E49 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +269,7 @@
 				DEVELOPMENT_TEAM = P2WRVAYBLT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsArbitraryLoads = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,6 +302,7 @@
 				DEVELOPMENT_TEAM = P2WRVAYBLT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsArbitraryLoads = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		46D0EEFB2F8426CC00230E49 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hotwired/hotwire-native-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46D0EEFC2F8426CC00230E49 /* HotwireNative */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46D0EEFB2F8426CC00230E49 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */;
+			productName = HotwireNative;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46D0EEE52F84269200230E49 /* Project object */;
 }
