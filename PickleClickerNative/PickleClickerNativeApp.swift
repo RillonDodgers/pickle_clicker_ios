@@ -1,5 +1,4 @@
 import UIKit
-import HotwireNative
 
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -7,7 +6,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
-        configureHotwire()
         return true
     }
 
@@ -22,13 +20,5 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         configuration.delegateClass = SceneDelegate.self
         return configuration
-    }
-
-    private func configureHotwire() {
-        if let pathConfigurationURL = Bundle.main.url(forResource: "path-configuration", withExtension: "json") {
-            Hotwire.loadPathConfiguration(from: [.file(pathConfigurationURL)])
-        }
-
-        Hotwire.config.showDoneButtonOnModals = true
     }
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		460A7AB72F85000100A1C001 /* ChanningTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A7AB62F85000100A1C001 /* ChanningTabBarController.swift */; };
-		46D0EEFD2F8426CC00230E49 /* HotwireNative in Frameworks */ = {isa = PBXBuildFile; productRef = 46D0EEFC2F8426CC00230E49 /* HotwireNative */; };
 		46D0EEFF2F84282300230E49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0EEFE2F84282300230E49 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -16,6 +15,7 @@
 		460A7AB62F85000100A1C001 /* ChanningTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanningTabBarController.swift; sourceTree = "<group>"; };
 		46D0EEED2F84269200230E49 /* PickleClickerNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickleClickerNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D0EEFE2F84282300230E49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		47A100001111111111111111 /* PickleClickerNativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickleClickerNativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -24,14 +24,35 @@
 			path = PickleClickerNative;
 			sourceTree = "<group>";
 		};
+		47A100011111111111111111 /* PickleClickerNativeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PickleClickerNativeTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXContainerItemProxy section */
+		47A100021111111111111111 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46D0EEE52F84269200230E49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46D0EEEC2F84269200230E49;
+			remoteInfo = PickleClickerNative;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		46D0EEEA2F84269200230E49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D0EEFD2F8426CC00230E49 /* HotwireNative in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47A100041111111111111111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				46D0EEEF2F84269200230E49 /* PickleClickerNative */,
+				47A100011111111111111111 /* PickleClickerNativeTests */,
 				46D0EEEE2F84269200230E49 /* Products */,
 				460A7AB62F85000100A1C001 /* ChanningTabBarController.swift */,
 				46D0EEFE2F84282300230E49 /* SceneDelegate.swift */,
@@ -52,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				46D0EEED2F84269200230E49 /* PickleClickerNative.app */,
+				47A100001111111111111111 /* PickleClickerNativeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,12 +98,30 @@
 				46D0EEEF2F84269200230E49 /* PickleClickerNative */,
 			);
 			name = PickleClickerNative;
-			packageProductDependencies = (
-				46D0EEFC2F8426CC00230E49 /* HotwireNative */,
-			);
 			productName = PickleClickerNative;
 			productReference = 46D0EEED2F84269200230E49 /* PickleClickerNative.app */;
 			productType = "com.apple.product-type.application";
+		};
+		47A100031111111111111111 /* PickleClickerNativeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47A100091111111111111111 /* Build configuration list for PBXNativeTarget "PickleClickerNativeTests" */;
+			buildPhases = (
+				47A100051111111111111111 /* Sources */,
+				47A100041111111111111111 /* Frameworks */,
+				47A100061111111111111111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47A100081111111111111111 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				47A100011111111111111111 /* PickleClickerNativeTests */,
+			);
+			name = PickleClickerNativeTests;
+			productName = PickleClickerNativeTests;
+			productReference = 47A100001111111111111111 /* PickleClickerNativeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +136,10 @@
 					46D0EEEC2F84269200230E49 = {
 						CreatedOnToolsVersion = 26.2;
 					};
+					47A100031111111111111111 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 46D0EEEC2F84269200230E49;
+					};
 				};
 			};
 			buildConfigurationList = 46D0EEE82F84269200230E49 /* Build configuration list for PBXProject "PickleClickerNative" */;
@@ -106,21 +151,26 @@
 			);
 			mainGroup = 46D0EEE42F84269200230E49;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-				46D0EEFB2F8426CC00230E49 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */,
-			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 46D0EEEE2F84269200230E49 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				46D0EEEC2F84269200230E49 /* PickleClickerNative */,
+				47A100031111111111111111 /* PickleClickerNativeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		46D0EEEB2F84269200230E49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47A100061111111111111111 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -139,7 +189,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		47A100051111111111111111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47A100081111111111111111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46D0EEEC2F84269200230E49 /* PickleClickerNative */;
+			targetProxy = 47A100021111111111111111 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		46D0EEF62F84269300230E49 /* Debug */ = {
@@ -329,6 +394,57 @@
 			};
 			name = Release;
 		};
+		47A100071111111111111111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P2WRVAYBLT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = party.dillonrodgers.PickleClickerNativeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PickleClickerNative.app/PickleClickerNative";
+				TEST_TARGET_NAME = PickleClickerNative;
+			};
+			name = Debug;
+		};
+		47A1000A1111111111111111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P2WRVAYBLT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = party.dillonrodgers.PickleClickerNativeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PickleClickerNative.app/PickleClickerNative";
+				TEST_TARGET_NAME = PickleClickerNative;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -350,26 +466,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		47A100091111111111111111 /* Build configuration list for PBXNativeTarget "PickleClickerNativeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47A100071111111111111111 /* Debug */,
+				47A1000A1111111111111111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		46D0EEFB2F8426CC00230E49 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hotwired/hotwire-native-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		46D0EEFC2F8426CC00230E49 /* HotwireNative */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 46D0EEFB2F8426CC00230E49 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */;
-			productName = HotwireNative;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46D0EEE52F84269200230E49 /* Project object */;
 }

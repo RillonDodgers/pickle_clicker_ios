@@ -1,7 +1,7 @@
 import Foundation
 
 enum AppConfiguration {
-    static let defaultBaseURL = "http://localhost:3000"
+    static let defaultBaseURL = "https://pickle-clicker.dillonrodgers.party"
 
     static var baseURL: URL {
         let environment = ProcessInfo.processInfo.environment
@@ -16,5 +16,16 @@ enum AppConfiguration {
         }
 
         return url
+    }
+
+    static var isDeveloperOptionsEnabled: Bool {
+        #if DEBUG
+        return true
+        #else
+        let environment = ProcessInfo.processInfo.environment
+        let arguments = ProcessInfo.processInfo.arguments
+        return environment["PICKLE_CLICKER_DEVELOPER_OPTIONS"] == "1"
+            || arguments.contains("--developer-options-enabled")
+        #endif
     }
 }
